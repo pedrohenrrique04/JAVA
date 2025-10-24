@@ -1,0 +1,55 @@
+Atalhos top
+=====================================================================
+shift + tab indent a line or section 
+alt + shift + a comment a block 
+control + r Debugger and run
+Alt + Shift + ↓ / ↑ copiar linha atual 
+Ctrl + Shift + K apagar linha atual 
+Ctrl + Shift + L Selecionar Todas as Ocorrências
+Ctrl + Shift + A: Encontrar e executar qualquer ação
+Ctrl + E: Mostrar arquivos recentes
+Ctrl + /: Comentar/descomentar linha
+Ctrl + Shift + F10: Executar a aplicação
+
+Short cut 
+
+psvm (public static void main).
+sout (system.out.println).
+soutv é um sout com uma concatenação.
+=====================================================================
+
+Variaveis, tipagem de dados
+=====================================================================
+Variáveis são espaços na memoria que guarda coisas como sequencias de caracteres, números inteiros, números flutuantes, true ou false e outras coisas. Tipagem de dados se refere ao tipo do dado, ela é util, pois nós ajuda a entender qual a funcionalidade de algo.
+O tipo de dado escolhido determina que tipo de informação a variável pode guardar e como ela deve ser tratada.
+=====================================================================
+
+Dados primitivos e o erro de 50 milhoes
+=====================================================================
+Dados Primitivos Abordados
+int: Números inteiros.
+float: Números de ponto flutuante de precisão simples.
+double: Números de ponto flutuante de precisão dupla.
+char: Um único caractere.
+boolean: Valores verdadeiros ou falsos.
+byte: Números inteiros pequenos.
+short: Números inteiros menores que um int.
+Long: Números inteiros maiores que um int.
+
+Uma classe é um molde.
+=====================================================================
+
+Dados não primitivos? Métodos?
+=====================================================================
+Dados nao primitivos: String, Array, class, enum.
+Com dados primitivos eu posso acessar métodos.
+exemplos: .toUpperCase, toLowerCase.
+=====================================================================
+
+Condicionais
+=====================================================================
+se (condicao) {faca isso} seNao{}
+if (){} elseif (){} else{}
+< > <= >= == && ||
+
+
