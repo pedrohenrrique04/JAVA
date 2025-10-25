@@ -51,5 +51,10 @@ Condicionais
 se (condicao) {faca isso} seNao{}
 if (){} elseif (){} else{}
 < > <= >= == && ||
+=====================================================================
+
+Scanners e validação de dados
+=====================================================================
+Em um scanner nos criamos um espaço para que o usuário possa passar algum valor ao  nosso código 
 
 
