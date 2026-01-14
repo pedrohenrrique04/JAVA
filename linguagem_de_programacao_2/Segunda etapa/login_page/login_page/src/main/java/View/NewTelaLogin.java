@@ -1,3 +1,7 @@
+package View;
+
+import Controller.ControllerCadastro;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -97,7 +101,8 @@ public class NewTelaLogin extends JFrame {
                 String senha = new String(txtSenha.getPassword());
 
                 // Verifica se usuário e senha correspondem aos valores esperados
-                if (usuario.equals("admin") && senha.equals("123")) {
+                ControllerCadastro controller = new ControllerCadastro();
+                if (controller.autenticar(usuario, senha)) {
                     JOptionPane.showMessageDialog(null, "Login realizado com sucesso!");
                     // Aqui você poderia abrir uma nova tela, por exemplo:
                     // new TelaPrincipal().setVisible(true);
@@ -125,6 +130,36 @@ public class NewTelaLogin extends JFrame {
         linkLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
         add(painel);
         painel.add(linkLabel);
+        // Adicionar antes de setVisible(true)
+        JLabel lblCadastro = new JLabel("<html><a href=''>Cadastre-se</a></html>");
+        lblCadastro.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        lblCadastro.setForeground(Color.BLUE);
+        lblCadastro.setAlignmentX(Component.CENTER_ALIGNMENT);
+
+        lblCadastro.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                new TelaCadastro();
+            }
+        });
+
+        JLabel lblResetSenha = new JLabel("<html><a href=''>Esqueceu a senha?</a></html>");
+        lblResetSenha.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        lblResetSenha.setForeground(Color.BLUE);
+        lblResetSenha.setAlignmentX(Component.CENTER_ALIGNMENT);
+
+        lblResetSenha.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                new TelaResetSenha();
+            }
+        });
+
+        painel.add(Box.createRigidArea(new Dimension(0, 25)));
+        painel.add(lblCadastro);
+        painel.add(Box.createRigidArea(new Dimension(0, 10)));
+        painel.add(lblResetSenha);
+
         setVisible(true);
         painel.add(Box.createRigidArea(new Dimension(0, 25)));
         JPanel painelLink = new JPanel(new FlowLayout(FlowLayout.CENTER));
